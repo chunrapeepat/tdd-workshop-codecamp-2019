@@ -1,4 +1,4 @@
-const sortNumber = require("./sortNumber");
+const sortNumber = require("../exercise01/sortNumber");
 
 function isEqual(result, expected) {
   if (result[0] === expected[0] && result[1] === expected[1] && result[2] === expected[2]) {
@@ -10,10 +10,10 @@ function isEqual(result, expected) {
 function test(title, callback) {
   try {
     callback();
-    console.log(`${title}: test passed!`)
+    console.log(`${title}: ✓ test passed!`)
   } catch (e) {
     console.error(e)
-    console.log(`${title}: test failed!`)
+    console.log(`${title}: ✕ test failed!`)
   }
 }
 
@@ -30,5 +30,25 @@ const expected = [1, 2, 3];
 
 test("a > b > c", () => {
   expect(sortNumber(3, 2, 1)).toBe(expected);
+});
+
+test("b > a > c", () => {
+  expect(sortNumber(2, 3, 1)).toBe(expected);
+});
+
+test("b > c > a", () => {
+  expect(sortNumber(1, 3, 2)).toBe(expected);
+});
+
+test("a > c > b", () => {
+  expect(sortNumber(3, 1, 2)).toBe(expected);
+});
+
+test("c > a > b", () => {
+  expect(sortNumber(2, 1, 3)).toBe(expected);
+});
+
+test("c > b > a", () => {
+  expect(sortNumber(1, 2, 3)).toBe(expected);
 });
 
