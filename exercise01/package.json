@@ -1,0 +1,11 @@
+{
+  "name": "exercise01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sortNumber.js",
+  "scripts": {
+    "test": "node sortNumber.test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
