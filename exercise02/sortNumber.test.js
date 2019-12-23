@@ -1,3 +1,5 @@
+// 1. Implement Expect Function ✓ ✕
+// 2. Implement Test Function
 const sortNumber = require("../exercise01/sortNumber");
 
 function isEqual(result, expected) {
@@ -8,22 +10,11 @@ function isEqual(result, expected) {
 }
 
 function test(title, callback) {
-  try {
-    callback();
-    console.log(`${title}: ✓ test passed!`)
-  } catch (e) {
-    console.error(e)
-    console.log(`${title}: ✕ test failed!`)
-  }
+  // TODO: Implement Code
 }
 
 function expect(result) {
-  return {
-    toBe(expected) {
-      if (!isEqual(result, expected))
-        throw new Error(`${result} is not equal to ${expected}`)
-    }
-  }
+  // TODO: Implement Code
 }
 
 const expected = [1, 2, 3];
