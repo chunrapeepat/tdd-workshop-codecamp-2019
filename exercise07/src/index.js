@@ -1,9 +1,12 @@
-import express from "express"
+import express from "express";
+import bodyParser from 'body-parser';
 
-import setupRoutes from './routes'
+import setupRoutes from './routes';
 
 async function startServer({port = process.env.SERVER_PORT} = {}) {
   const app = express()
+  app.use(bodyParser.urlencoded());
+  app.use(bodyParser.json());
 
   setupRoutes(app)
 
@@ -18,3 +21,4 @@ async function startServer({port = process.env.SERVER_PORT} = {}) {
 }
 
 startServer({port: 8888});
+
