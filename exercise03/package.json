@@ -1,0 +1,11 @@
+{
+  "name": "exercise03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "search.js",
+  "scripts": {
+    "test": "node search.test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
