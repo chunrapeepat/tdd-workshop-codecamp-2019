@@ -35,7 +35,7 @@ jest.mock("../../lowdb", () => {
 })
 
 describe('addTask', function () {
-  test("task title must be exist", async () => {
+  test("addTask: task title must be exist", async () => {
     const {res, req, next} = setup();
     req.body = {};
 
@@ -47,7 +47,7 @@ describe('addTask', function () {
     expect(res.send).toHaveBeenCalledWith(expect.stringMatching(/Error.*/));
   })
 
-  test("task title can't be empty", async () => {
+  test("addTask: task title can't be empty", async () => {
     const {res, req, next} = setup();
     req.body = {title: ""};
 
@@ -59,7 +59,7 @@ describe('addTask', function () {
     expect(res.send).toHaveBeenCalledWith(expect.stringMatching(/Error.*/));
   })
 
-  test("successfully add tasks", async () => {
+  test("addTask: successfully add tasks", async () => {
     const {res, req, next} = setup();
     req.body = {title: "Do Homework"};
     db.defaults({tasks: []}).write()

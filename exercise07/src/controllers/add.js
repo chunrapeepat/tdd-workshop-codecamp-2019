@@ -1,8 +1,9 @@
 import db from "../lowdb";
 
+// {title: "Do homework"}
+
 async function addTask(req, res) {
-  console.log(req.body)
-  if (!req.body.title) {
+  if (req.body.title === undefined) {
     return res.status(422).send("Error: Task title must be exist!");
   }
   const {title} = req.body;
